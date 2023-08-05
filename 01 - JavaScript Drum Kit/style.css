@@ -1,27 +1,31 @@
-html {
+body {
   font-size: 10px;
   background: url('./background.jpg') bottom center;
   background-size: cover;
-}
-
-body,html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 
-.keys {
-  display: flex;
-  flex: 1;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  color: white;
 }
 
-.key {
+.drum-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 10px;
+  justify-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.drum {
   border: .4rem solid black;
   border-radius: .5rem;
-  margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
   transition: all .07s ease;
@@ -30,9 +34,10 @@ body,html {
   color: white;
   background: rgba(0,0,0,0.4);
   text-shadow: 0 0 .5rem black;
+  cursor: pointer;
 }
 
-.playing {
+.drum:hover {
   transform: scale(1.1);
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
@@ -48,4 +53,17 @@ kbd {
   text-transform: uppercase;
   letter-spacing: .1rem;
   color: #ffc600;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1rem;
+  margin: 2rem 0;
+  color: white;
+}
+
+.logo {
+  text-align: center;
+  font-size: 1rem;
+  color: white;
 }
