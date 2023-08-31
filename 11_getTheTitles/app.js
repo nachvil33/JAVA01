@@ -15,15 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to update the book list
     function updateBookList() {
         bookTitlesList.innerHTML = '';
-        const titles = getTheTitles(books);
-        titles.forEach(title => {
+        books.forEach(book => {
             const listItem = document.createElement('li');
-            listItem.textContent = title;
+            listItem.textContent = `${book.title} by ${book.author}`; // Combine title and author
 
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Delete';
             deleteButton.classList.add('delete-button');
-            deleteButton.dataset.title = title;
+            deleteButton.dataset.title = book.title; // Use title as the identifier
 
             listItem.appendChild(deleteButton);
             bookTitlesList.appendChild(listItem);
