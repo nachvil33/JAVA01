@@ -55,10 +55,12 @@ button:hover {
     font-weight: bold;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+footer a[href="https://twitter.com/FullTechFlowCEO"] {
+    text-decoration: underline; 
+    color: black;
 }
 
-/* Add additional CSS styles as needed */
+footer a[href="https://www.linkedin.com/in/ignacio-manuel-castañeda-acuña-1a4b07243"] {
+    text-decoration: underline;
+    color: black; 
+}
