@@ -1,46 +1,56 @@
+header {
+    background-color: orange;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    color: black;
+}
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #f0f0f0;
+    min-height: 100vh;
     margin: 0;
+    background-color: #f0f0f0;
 }
 
 .calculator {
-    background-color: #f0f0f0; /* Cambiamos el fondo a un gris más claro */
-    border-radius: 10px; /* Aumentamos el radio del borde para hacerlo más suave */
+    background-color: #f0f0f0;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 350px; /* Aumentamos el ancho para dar más espacio a los botones */
-    padding: 20px; /* Agregamos un poco de espacio alrededor del contenido */
-    margin-top: 20px; /* Añadimos margen superior para centrar en la pantalla */
+    width: 350px;
+    padding: 20px;
+    margin-top: 20px;
 }
 
 .display {
-    font-size: 36px; /* Aumentamos el tamaño del texto en el display */
+    font-size: 36px;
     padding: 10px;
-    border: 1px solid #ccc; /* Cambiamos el borde inferior a un borde completo */
-    margin-bottom: 10px; /* Agregamos margen inferior para separar del contenido de los botones */
-    background-color: #fff; /* Fondo blanco para el display */
+    height: 40px;
+    border: 30px solid #ccc;
+    margin-bottom: 10px;
+    background-color: #fff;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px; /* Agregamos espacio entre los botones */
+    gap: 10px;
 }
 
 .btn {
-    font-size: 24px; /* Aumentamos el tamaño del texto en los botones */
+    font-size: 24px;
     padding: 20px 0;
     cursor: pointer;
-    border: 1px solid #ccc; /* Agregamos un borde a los botones */
-    background-color: #fff; /* Fondo blanco para los botones */
+    border: 1px solid #ccc;
+    background-color: #fff;
 }
 
 .btn:hover {
-    background-color: #eee; /* Cambiamos el color de fondo al pasar el ratón */
+    background-color: #eee;
 }
 
 #equals {
@@ -52,4 +62,20 @@ body {
 
 #equals:hover {
     background-color: #cc5500;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+footer a[href="https://twitter.com/FullTechFlowCEO"] {
+    text-decoration: underline; 
+    color: white;
+}
+
+footer a[href="https://www.linkedin.com/in/ignacio-manuel-castañeda-acuña-1a4b07243"] {
+    text-decoration: underline;
+    color: white; 
 }

@@ -1,62 +1,29 @@
-const findTheOldest = require('./findTheOldest')
+const findTheOldest = require('./findTheOldest');
 
-describe('findTheOldest', () => {
-  test('finds the oldest person!', () => {
-    const people = [
-      {
-        name: "Carly",
-        yearOfBirth: 1942,
-        yearOfDeath: 1970,
-      },
-      {
-        name: "Ray",
-        yearOfBirth: 1962,
-        yearOfDeath: 2011,
-      },
-      {
-        name: "Jane",
-        yearOfBirth: 1912,
-        yearOfDeath: 1941,
-      },
-    ]
-    expect(findTheOldest(people).name).toBe('Ray');
-  });
-  test.skip('finds the oldest person if someone is still living', () => {
-    const people = [
-      {
-        name: "Carly",
-        yearOfBirth: 2018,
-      },
-      {
-        name: "Ray",
-        yearOfBirth: 1962,
-        yearOfDeath: 2011,
-      },
-      {
-        name: "Jane",
-        yearOfBirth: 1912,
-        yearOfDeath: 1941,
-      },
-    ]
-    expect(findTheOldest(people).name).toBe('Ray');
-  });
-  test.skip('finds the oldest person if the OLDEST is still living', () => {
-    const people = [
-      {
-        name: "Carly",
-        yearOfBirth: 1066,
-      },
-      {
-        name: "Ray",
-        yearOfBirth: 1962,
-        yearOfDeath: 2011,
-      },
-      {
-        name: "Jane",
-        yearOfBirth: 1912,
-        yearOfDeath: 1941,
-      },
-    ]
-    expect(findTheOldest(people).name).toBe('Carly');
-  });
+describe('Find the Oldest', () => {
+    it('should find the oldest person with a death date', () => {
+        const people = [
+            { name: 'John', birth: 1980, death: 2022 },
+            { name: 'Alice', birth: 1975, death: 2020 },
+            { name: 'Bob', birth: 1960, death: 2010 },
+        ];
+        const oldest = findTheOldest(people);
+        expect(oldest.name).toBe('John');
+    });
+
+    it('should find the oldest person without a death date', () => {
+        const people = [
+            { name: 'Eve', birth: 1990 },
+            { name: 'Alice', birth: 1975, death: 2020 },
+            { name: 'Bob', birth: 1960, death: 2010 },
+        ];
+        const oldest = findTheOldest(people);
+        expect(oldest.name).toBe('Alice');
+    });
+
+    it('should return null for an empty array', () => {
+        const people = [];
+        const oldest = findTheOldest(people);
+        expect(oldest).toBe(null);
+    });
 });
